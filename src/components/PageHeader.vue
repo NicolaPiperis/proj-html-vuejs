@@ -85,7 +85,9 @@
       <div class="search">
 
         <!-- ICONA CARRELLO -->
-        <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+        <i class="fa-solid fa-cart-shopping circle_container" style="color: #000000;">
+          <span class="circle">0</span>
+        </i>
 
         <!-- ICONA PROFILO UTENTE -->
         <i class="fa-regular fa-circle-user" style="color: #000000;"></i>
@@ -94,6 +96,9 @@
         <form >
 
           <input placeholder="Search..." type="search">
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
 
         </form>
 
@@ -132,9 +137,10 @@
           display: flex;
           gap: 10px;
           align-items: center;
+          font-size: 15px;
 
           i{
-            font-size: 10px;
+            font-size: 8px;
           }
         }
       }
@@ -152,23 +158,59 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-basis: 350px;
+        flex-basis: 400px;
+        
+        i{
+          cursor: pointer;
+          font-size: 18px;
 
-        input{
+        }
+        .circle_container{
+          position: relative;
+          .circle{
+            position: absolute;
+            top: -14px;
+            right: -14px;
+            width: 20px;
+            height: 20px;
+            border-radius: 25px;
+            background: #20AD96;
+            color: white;
+            font-size: 10px;
+            display: flex;justify-content: center;
+            align-items: center;
+          }
+        }
+        form{
+          display: flex;
+          justify-content: space-between;
           height: 45px;
           width: 280px;
           background-color: #F5F7FA;
           border-radius: 10px;
+
+          input{
+          background-color: #F5F7FA;
           border: none;
+          border-radius: 10px;
           outline: none;
-
-          input::placeholder{
-            color: red;
+          text-indent: 20px;
           }
-        }
 
-        i{
-          cursor: pointer;
+          ::placeholder {
+          font-size: 14px;
+          }
+
+          button{
+            color: #20AD96;
+            background-color: #F5F7FA;
+            border: none;
+            border-top-right-radius: 10px;
+            border-end-end-radius: 10px;
+            font-size: 15px;
+            padding-right: 15px;
+          }
+
         }
       }
     }
