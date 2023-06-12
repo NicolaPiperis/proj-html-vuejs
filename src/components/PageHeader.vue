@@ -106,11 +106,55 @@
 
     </nav>
 
+    <!-- HERO -->
+    <div class="hero">
+
+      <!-- TITOLI E BOTTONE CENTRALE -->
+      <div class="center-text">
+
+        <strong>Commence business</strong>
+        <h1>Distant Mentoring Program</h1>
+
+        <button>
+
+          <a href="#">Download free guidebook
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </button>
+
+      </div>
+
+      <!-- BARRA LATERALE CON ICONE/BOTTONI -->
+      <aside>
+
+        <a href="#">
+          <i class="fa-solid fa-ruler-combined"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-regular fa-futbol"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-book"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+      </aside>
+
+    </div>
+
   </header>
 
 </template>
 
 <style scoped lang="scss">
+@use './../styles/partials/variables.scss' as *;
+
   header{
     background-color: white;
     height: 80px;
@@ -174,7 +218,7 @@
             width: 20px;
             height: 20px;
             border-radius: 25px;
-            background: #20AD96;
+            background: $verde-acqua;
             color: white;
             font-size: 10px;
             display: flex;justify-content: center;
@@ -202,7 +246,7 @@
           }
 
           button{
-            color: #20AD96;
+            color: $verde-acqua;
             background-color: #F5F7FA;
             border: none;
             border-top-right-radius: 10px;
@@ -211,6 +255,65 @@
             padding-right: 15px;
           }
 
+        }
+      }
+    }
+
+    .hero{
+      width: 100%;
+      height: 650px;
+      background-image: url(./../../public/images/home-3-hero-bg.jpg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .center-text{
+        text-align: center;
+        color: white;
+        font-size: 28px;
+
+        h1{
+          font-weight: 500;
+        }
+
+        button {
+          height: 55px;
+          min-width: 280px;
+          padding: 10px;
+          border: none;
+          border-radius: 8px;
+          background-color: white;
+          margin-top: 20px;
+          
+          a{
+            color: $verde-acqua;
+            font-weight: 700;
+
+            i{
+              color: $verde-acqua;
+            }
+          }
+        }
+      }
+
+      aside{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+
+        height: 170px;
+        width: 45px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        justify-content: space-around;
+        position: absolute;
+        right: 0;
+        top: 100px;
+
+        i{
+          color: $grigio;
         }
       }
     }
