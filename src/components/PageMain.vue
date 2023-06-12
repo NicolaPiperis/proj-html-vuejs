@@ -10,11 +10,11 @@
     <main>
 
         <!-- WORK CULTURE -->
-        <section class="work-culture">
+        <section class="white-sections">
 
             <div class="container">
 
-                <div class="row">
+                <div class="between-row">
 
                     <!-- TITLE AND PARAGRAPH -->
                     <div class="text">
@@ -88,115 +88,163 @@
 
         </section>
 
-    </main>
+        <section class="white-sections">
 
+            <div class="container">
+
+                <div class="between-row">
+                    
+                    <!-- IMG CONNECTED WITH THE TEXT -->
+                    <div class="image">
+    
+                        <div class="main-img">
+
+                            <img src="./../../public/images/stock-full-hd-11-670x450.jpg" alt="skills upgrade info image">
+
+                            <!-- DECORATION --> 
+                            <img src="./../../public/images/icon-youtube-play.png" alt="youtube icon" class="youtube-decoration">
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- TITLE AND PARAGRAPH -->
+                    <div class="text self-center">
+
+                        <div class="pre-title">
+                            HOW WE WORK
+                        </div>
+
+                        <h2>
+                            Upgrade your skilss
+                            <span>Upgrade your life</span>
+                        </h2>
+
+                        <p>
+                            Opening up more opportunities in front of you to get the ticket to more ejoyable door in life.
+                            Getting equipped with new skills for new sets of insights into your career.
+                            MaxCoach accompany learners in every stage of learning.
+                        </p>
+
+                        <div class="connected-link-skillsupgrade" id="black">
+                
+                            Download free guidebook
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </div>
+
+                    </div>    
+
+                </div>
+
+                
+            </div>
+            
+        </section>
+
+        
+        
+    </main>
+    
 </template>
 
 <style scoped lang="scss">
     @use './../styles/partials/variables.scss' as *;
-
-    
-    .work-culture{
+    .white-sections{
         background-color: #F8F8F8;
         padding-top: 200px;
-        
-        .row{
+    }
+    
+    .between-row{
         display: flex;
         justify-content: space-between;
-
-            .text{
-                width: 35%;
-                position: relative;
-
-                .pre-title{
-                color: $grigio ;
-                }
-
-                h2{
-                    font-size: 32px;
-                    font-weight: 800;
-                    line-height: 180%;
-
-                    span{
-                        color: $verde-acqua;
-                        font-weight: 500;
-                    }
-                }
-
-                p{
-                    color: $grigio;
-                    margin: 30px 0;
-                    line-height: 180%;
-                }
-
-                .connected-link{
-                    color: $grigio;
-
-                    a{
-                        color: $verde-acqua;
-                        border-bottom: 1px solid $grigio;
-                    }
-                }
-
-                .decoration{
-                    width: 70px;
-                    height: 70px;
-                    border-radius: 50%;
-                    border: 10px solid #ecc5ab;
-                    position: absolute;
-                    top: -30px;
-                    right: -50px;
-                }
-            }
-            .image{
-                width: 50%;
-                
-                // .main-img{
-                //     position: relative;
-                    
-                // }
         
-                // .decoration-img{
-                //     position: absolute;
-                //     top: -95px;
-                //     right: 0px;
-                //     border-radius: 10px;
-                //     z-index: 10;
-                // }
+        .text{
+            width: 35%;
+            position: relative;
 
-                // .background-decoration-img{
-                //     position: absolute;
-                //     top: -95px;
-                //     right: 120px;
-                //     z-index: 1;
-                //     height: 90px;
-                // }
-
-                // .background-decoration-img2{
-                //     position: absolute;
-                //     bottom: -75px;
-                //     right: 150px;
-                //     z-index: 1;
-                // }
+            .pre-title{
+            color: $grigio ;
             }
-        }
 
-        .stats{
-            display: flex;
-            justify-content: space-around;
-            align-self: center;
-            margin: 150px 0;
-            text-align: center;
-            
-            strong{
-                color: $verde-acqua;
-                font-size: 35px;
+            h2{
+                font-size: 32px;
+                font-weight: 800;
+                line-height: 180%;
+
+                span{
+                    color: $verde-acqua;
+                    font-weight: 500;
+                }
             }
+
             p{
                 color: $grigio;
-                font-weight: 600;
+                margin: 30px 0;
+                line-height: 180%;
+            }
+
+            .connected-link{
+                color: $grigio;
+
+                a{
+                    color: $verde-acqua;
+                    border-bottom: 1px solid $grigio;
+                }
+            }
+
+            .decoration{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                border: 10px solid #ecc5ab;
+                position: absolute;
+                top: -30px;
+                right: -50px;
             }
         }
+        .image{
+            width: 50%;
+            
+            .main-img{
+                position: relative;
+                
+            }
+
+            .youtube-decoration{
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+                width: 65px;
+            }
+            
+        }
+
     }
+    .stats{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 150px ;
+        text-align: center;
+        
+        strong{
+            color: $verde-acqua;
+            font-size: 35px;
+        }
+        p{
+            color: $grigio;
+            font-weight: 600;
+        }
+    }
+
+    .connected-link-skillsupgrade{
+        border-bottom: 1px solid $grigio;
+        width: 250px;
+    }
+
+    
+    
 
 </style>        
