@@ -157,10 +157,9 @@
 
   header{
     background-color: white;
-    height: 80px;
 
     .container{
-      height: 100%;
+      height: 80px;
       width: 90%;
       margin: auto;
       display: flex;
