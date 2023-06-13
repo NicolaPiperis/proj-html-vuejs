@@ -21,15 +21,35 @@ a{
     color: black;
 }
 
+#black{
+    color: black;
+}
+
+// LAYOUT
+
 .container{
     width: 70%;
     margin: auto;
 }
 
-#black{
-    color: black;
-}
-
 .self-center{
     align-self: center;
+}
+
+.content-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.between-row{
+    display: flex;
+    justify-content: space-between;
+}  
+
+.row{
+    display: flex;
+}
+
+.text-center{
+    text-align: center;
 }
