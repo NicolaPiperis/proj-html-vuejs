@@ -52,14 +52,13 @@
 
                         <img src="images/stock-full-hd-10-ohki1ayywq3cqutettrncduujpoaorifqu4relt2ts.jpg" alt="work culture info image" class="main-img">
 
-                        <!-- DECORATIOn -->
+                        <div class="culture-decoration"></div>
 
-                        <!-- <img src="images/about-us-01-ohkia3qg98rq9vg3s0mn2hkflr1migdqdw370qnegc.jpg" alt="info decoration" class="decoration-img">
+                        <div class="culture-decoration2">
+                            <img src="../../public/images/about-us-01-ohkia3qg98rq9vg3s0mn2hkflr1migdqdw370qnegc.jpg" alt="">
+                        </div>
 
-                        <img src="images/maxcoach-shape-07.png" alt="info" class="background-decoration-img">
-
-                        <img src="images/maxcoach-shape-02.png" alt="info" class="background-decoration-img2"> -->
-                        
+                        <div class="culture-decoration3"></div>
 
                     </div>
 
@@ -408,6 +407,13 @@
                     <div class="image">
 
                         <img src="images/home-3-team-image.png" alt="work culture info image" class="main-img">
+
+                        <div class="decoration-guide">
+                        </div>
+
+                        <div class="decoration-guide2"></div>
+
+                        <div class="decoration-guide3"></div>
                         
                     </div>
 
@@ -489,12 +495,12 @@
                         <div class="info">
 
                             <span>
-                                <i class="fa-solid fa-book"></i>
+                                <i class="fa-solid fa-calendar-days"></i>
                                 May 15, 2020
                             </span>
 
                             <span>
-                                <i class="fa-regular fa-user"></i>
+                                <i class="fa-regular fa-eye"></i>
                                 688 views
                             </span>
 
@@ -518,12 +524,12 @@
                         <div class="info">
 
                             <span>
-                                <i class="fa-solid fa-book"></i>
+                                <i class="fa-solid fa-calendar-days"></i>
                                 May 15,2020
                             </span>
 
                             <span>
-                                <i class="fa-regular fa-user"></i>
+                                <i class="fa-regular fa-eye"></i>
                                 603 views
                             </span>
 
@@ -546,12 +552,12 @@
                         <div class="info">
 
                             <span>
-                                <i class="fa-solid fa-book"></i>
+                                <i class="fa-solid fa-calendar-days"></i>
                                  May 15, 2020
                             </span>
 
                             <span>
-                                <i class="fa-regular fa-user"></i>
+                                <i class="fa-regular fa-eye"></i>
                                 397 views
                             </span>
 
@@ -563,6 +569,53 @@
                 </div>
 
                 
+
+            </div>
+
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="white-sections">
+        
+            <div class="row content-center gap-100">
+
+                <div class="circle-general settings-n-decoration"></div>
+
+                
+                <div class="text text-center">
+
+                    <h2>
+                        Subscribe
+                        <span>Newsletter</span>
+                        
+                    </h2>
+
+                    <p>
+                        Enter your email adress to register to our newletter subscription delivered on a regular basis!
+                    </p>
+
+                    <div class="row content-center">
+
+                        <form>
+
+                            <input placeholder="Enter your email" type="email">
+
+                            <button class="subscribe">
+                                <a href="#">Subscribe</a>
+                            </button>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="decoration-n">
+
+                    <img src="./../../public/images/maxcoach-shape-02.png" alt="">
+
+                </div>
 
             </div>
 
@@ -646,6 +699,7 @@
         }
         .image{
             width: 50%;
+            position: relative;
             
             .main-img{
                 position: relative;
@@ -856,7 +910,7 @@
 
     button {
         height: 55px;
-        min-width: 230px;
+        width: 230px;
         padding: 5px;
         border: none;
         border-radius: 8px;
@@ -878,7 +932,134 @@
 
         .card{
             background-color: #F8F8F8;
+
+            .pre-title{
+                padding: 30px 0 0 20px;
+                color: $grigio;
+            }
         }
+    }
+
+    form{
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    width: 480px;
+    background-color: #F5F7FA;
+    border-radius: 10px;
+
+        input{
+        background-color: #F5F7FA;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        text-indent: 20px;
+        }
+
+        ::placeholder {
+        font-size: 14px;
+        }
+
+        .subscribe{
+            color: white;
+            width: 100px;
+            margin: 0;
+            height: 45px;
+            
+            a{
+                font-size: 12px;
+            }
+        }
+
+    }
+    .settings-n-decoration{
+        border-color: #20ad959f;
+        align-self: center;
+        
+    }
+
+    .decoration-n{
+        width: 200px;
+        height: 200px;
+        background-image: url(./../../public/images/maxcoach-shape-09.png);
+
+        img{
+            position: relative;
+            top: 100px;
+            left: 80px;
+        }
+    }
+
+    .decoration-guide{
+        background-image: url(../../public/images/maxcoach-shape-07-150x150.png);
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        bottom: -50px;
+        right: 180px;
+        z-index: 1;
+    }
+
+    .decoration-guide2{
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background: url(../../public/images/maxcoach-shape-01.png);
+        background-repeat: no-repeat;
+        bottom: -100px;
+        left: -200px;
+    }
+
+    .decoration-guide3{
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background: url(../../public/images/maxcoach-shape-05-150x150.png);
+        background-repeat: no-repeat;
+        top: 100px;
+        left: 0px;
+    }
+
+    .culture-decoration{
+        position: absolute;
+        z-index: 1000;
+        width: 150px;
+        height: 150px;
+        background: url(../../public/images/maxcoach-shape-02.png);
+        background-repeat: no-repeat;
+        bottom: -80px;
+        right: 150px;
+    }
+
+    .culture-decoration2{
+        position: absolute;
+        z-index: 1000;
+        width: 300px;
+        height: 300px;
+        top: -80px;
+        right: -80px;
+
+        img{
+            border-radius: 15px;
+        }
+    }
+
+    .culture-decoration3{
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background: url(../../public/images/maxcoach-shape-07-150x150.png);
+        background-repeat: no-repeat;
+        top: -80px;
+        right: 110px;
+    }
+
+    .main-img{
+        position: relative;
+        z-index: 999;
     }
 
 
