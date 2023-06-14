@@ -1,6 +1,15 @@
 <script>
+import {store} from "../store.js";
   export default {
-    name : "PageHeader"
+    name : "PageHeader",
+    data () {
+      return{
+        store
+      }
+    },
+    props: {
+      details: Object 
+    }
   }
 </script>
 
@@ -15,59 +24,23 @@
       <!-- LISTA VOCI DI MENU -->
       <ul class="menu">
 
-        <li>
+        <li :class="(idxHeader === 1)? 'dropdown' : ''"
+        v-for="(detail, idxHeader) in details" :key="idxHeader">
 
-          <a href="#">Home</a>
+          <a class="active-menu" href="#">{{ detail }}</a>
           <a href="#">
-            <i class="fa-solid fa-chevron-down" style="color: #000000;"></i>
+            <i class="fa-solid fa-chevron-down active-menu" style="color: #000000;"></i>
           </a>
           
+          <div class="dropdown-content">
+            
+            <ul>
+              <li v-for="(dropdownContent, idxDropdownHeader) in store.dropdowncontents" :key="idxDropdownHeader">
+                <a href="#">{{ dropdownContent }}</a>
+              </li>
+            </ul>
 
-        </li>
-
-        <li>
-
-          <a href="#">Page</a>
-          <a href="#">
-            <i class="fa-solid fa-chevron-down" style="color: #000000;"></i>
-          </a>
-
-        </li>
-
-        <li>
-
-          <a href="#">Courses</a>
-          <a href="#">
-            <i class="fa-solid fa-chevron-down" style="color: #000000;"></i>
-          </a>
-
-        </li>
-
-        <li>
-
-          <a href="#">Features</a>
-          <a href="#">
-            <i class="fa-solid fa-chevron-down" style="color: #000000;"></i>
-          </a>
-
-        </li>
-
-        <li>
-
-          <a href="#">Blog</a>
-          <a href="#">
-            <i class="fa-solid fa-chevron-down" style="color: #000000;"></i>
-          </a>
-
-        </li>
-
-        <li>
-
-          <a href="#">Shop</a>
-          <a href="#">
-            <i class="fa-solid fa-chevron-down" style="color: #000000;"></i>
-          </a>
-
+          </div>
         </li>
 
       </ul>
@@ -76,7 +49,7 @@
       <div class="logo">
 
         <a href="#">
-          <img src="./../../public/images/dark-logo.png" alt="logo">
+          <img :src="store.headerLogo" alt="logo">
         </a>
 
       </div>
@@ -154,6 +127,37 @@
 
 <style scoped lang="scss">
 @use './../styles/partials/variables.scss' as *;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  bottom: -600px;
+  left: -20px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  border-bottom: 5px solid $verde-acqua;
+
+  li{
+    padding: 15px 10px;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover {
+
+}
 
   header{
     background-color: white;
@@ -293,6 +297,16 @@
               color: $verde-acqua;
             }
           }
+        }
+        button:hover{
+          background-color: $verde-acqua;
+          a{
+            color: white;
+            i{
+              color: white;
+            }
+          }
+
         }
       }
 

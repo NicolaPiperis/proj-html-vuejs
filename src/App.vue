@@ -1,13 +1,19 @@
 <script>
-import PageHeader from './components/PageHeader.vue'
-import PageMain from './components/PageMain.vue'
-import PageFooter from './components/PageFooter.vue'
+import PageHeader from './components/PageHeader.vue';
+import PageMain from './components/PageMain.vue';
+import PageFooter from './components/PageFooter.vue';
+import {store} from "./store.js"
 
 export default {
   components : {
     PageHeader,
     PageMain,
     PageFooter
+  },
+  data() {
+    return{
+      store
+    }
   }
 }
 
@@ -15,9 +21,9 @@ export default {
 
 <template>
 
-  <PageHeader/>
+  <PageHeader :details="store.headerInfo" />
   <PageMain/>
-  <PageFooter/>
+  <PageFooter :detailsFooter="store.footerInfo"/>
 
 </template>
 

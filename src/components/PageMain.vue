@@ -652,71 +652,70 @@
     
     // SECTIONS CONTENT
   
-        .text{
-            width: 35%;
-            position: relative;
+    .text{
+        width: 35%;
+        position: relative;
 
-            .pre-title{
-            color: $grigio ;
-            }
+        .pre-title{
+        color: $grigio ;
+        }
 
-            h2{
-                font-size: 32px;
-                font-weight: 800;
-                line-height: 180%;
+        h2{
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 180%;
 
-                span{
-                    color: $verde-acqua;
-                    font-weight: 500;
-                }
-            }
-
-            p{
-                color: $grigio;
-                margin: 30px 0;
-                line-height: 180%;
-            }
-
-            .connected-link{
-                color: $grigio;
-                cursor: pointer;
-
-                a{
-                    color: $verde-acqua;
-                    border-bottom: 1px solid $grigio;
-                }
-            }
-
-            .decoration{
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                border: 10px solid #ecc5ab;
-                position: absolute;
-                top: -30px;
-                right: -50px;
+            span{
+                color: $verde-acqua;
+                font-weight: 500;
             }
         }
-        .image{
-            width: 50%;
-            position: relative;
-            
-            .main-img{
-                position: relative;
-                
-            }
 
-            .youtube-decoration{
-                position: absolute;
-                top: 50%;
-                right: 50%;
-                transform: translate(50%, -50%);
-                width: 65px;
-                cursor: pointer;
+        p{
+            color: $grigio;
+            margin: 30px 0;
+            line-height: 180%;
+        }
+
+        .connected-link{
+            color: $grigio;
+            cursor: pointer;
+
+            a{
+                color: $verde-acqua;
+                border-bottom: 1px solid $grigio;
             }
+        }
+
+        .decoration{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 10px solid #ecc5ab;
+            position: absolute;
+            top: -30px;
+            right: -50px;
+        }
+    }
+    .image{
+        width: 50%;
+        position: relative;
+        
+        .main-img{
+            position: relative;
             
         }
 
+        .youtube-decoration{
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 65px;
+            cursor: pointer;
+        }
+        
+    }
     
     .stats{
         display: flex;
@@ -756,21 +755,22 @@
         img{
             border-radius: 10px;
         }
-
+        
         .price{
             margin: 30px 0 0 20px;
             color: $verde-acqua;
             font-weight: 800;
             font-size: 30px;
-
+            
             span{
                 font-size: 25px;
             }
         }
-
+        
         h3{
             margin: 30px 0 0 20px;
             line-height: 180%;
+            cursor: pointer;
         }
 
         .info{
@@ -798,6 +798,9 @@
 
     }
 
+    .card:hover h3{
+        color: $verde-acqua;
+    }
     .dot-container{
         gap: 25px;
         margin-top: 100px;

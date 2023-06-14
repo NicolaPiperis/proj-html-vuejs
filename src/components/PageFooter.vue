@@ -1,6 +1,9 @@
 <script>
     export default {
-        name : "PageFooter"
+        name : "PageFooter",
+        props: {
+        detailsFooter: Object 
+        }
     }
 </script>
 
@@ -15,26 +18,27 @@
                 <!-- ADDRESS -->
                 <div class="address">
 
-                    <h3>Address</h3>
+                    <h3>{{ detailsFooter.title }}</h3>
 
                     <ul>
 
-                        <li>382 NE 191st St # 87934 Miami, FL 33179-3899</li>
+                        <li>{{ detailsFooter.street }}</li>
 
-                        <li>+1(305)547-9909 (9am - 5pm EST, Monday-Friday)</li>
+                        <li>{{ detailsFooter.number }}</li>
 
-                        <li>support@maxcoach.com</li>
-
-                        <li>
-
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-
-                        </li>
+                        <li>{{ detailsFooter.email }}</li>
 
                     </ul>
+
+                    <div class="social-icon">
+
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+
+                    </div>
+
 
                 </div>
 
@@ -44,45 +48,25 @@
                     <!-- FIRST COL -->
                     <div class="explore">
 
-                        <h3>Explore</h3>
+                        <h3>{{ detailsFooter.exploreTitle }}</h3>
 
                         <ul>
 
-                            <li>Start here</li>
-
-                            <li>Blog</li>
-
-                            <li>About us</li>
+                            <li v-for="(infoExplore, idxExploreFooter) in detailsFooter.explore" :key="idxExploreFooter" >{{ infoExplore }}</li>
 
                         </ul>
-
+                        
                     </div>
-
-                    <!-- SECOND COL -->
-                    <ul class="second-col">
-
-                        <li>Success story</li>
-
-                        <li>Courses</li>
-
-                        <li>Contact us</li>
-
-                    </ul>
-
                     <!-- THIRD COL -->
                     <div class="information">
 
-                        <h3>Information</h3>
+                        <h3>{{ detailsFooter.informationTitle }}</h3>
 
                         <ul>
 
-                            <li>Membership</li>
-
-                            <li>Purchase guide</li>
-
-                            <li>Privicy policy</li>
-                            
-                            <li>Term of service</li>
+                            <li v-for="(infoInformation, idxInformationFooter) in detailsFooter.information" :key="idxInformationFooter" >
+                            {{ infoInformation }}
+                            </li>
 
                         </ul>
 
@@ -117,39 +101,56 @@
         height: 500px;
         position: relative;
 
+        li:hover {
+            color: $verde-acqua;
+            cursor: pointer;
+        }
+
         .address{
             color: white;
             padding-top: 100px;
             width: 60%;
         } 
+
+        .social-icon{
+            font-size: 22px;
+           i{
+            padding-right: 20px;
+            padding-top: 20px;
+            color: $grigio;
+           }
+           
+           i:hover{
+            color: $verde-acqua;
+           }
+        }
+
+
         .explore{
             color: white;
             padding-top: 100px;
+            columns: 2;
+            
+            li:nth-child(4){
+                padding-top: 53px;
+            }
         }
         .information{
             padding-top: 100px;
             color: white;
         }
-        .second-col{
-            padding-top: 160px;
+            
+        h3{
+            margin-bottom: 30px;
         }
-            
-            h3{
-                margin-bottom: 30px;
-            }
-            
-            ul{
-                color: rgba(255, 255, 255, 0.733);
-                list-style: none;
-                line-height: 250%;
-                font-size: 14px;
+        
+        ul{
+            color: rgba(255, 255, 255, 0.733);
+            list-style: none;
+            line-height: 250%;
+            font-size: 14px;
 
-                i{
-                    font-size: 22px;
-                    padding-right: 20px;
-                    padding-top: 20px;
-                }
-            }
+        }
 
         p{
             color: $grigio;
