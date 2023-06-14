@@ -128,6 +128,7 @@ import {store} from "../store.js";
 <style scoped lang="scss">
 @use './../styles/partials/variables.scss' as *;
 
+// DROPDOWN STYLES
 .dropdown {
   position: relative;
   display: inline-block;
@@ -155,10 +156,12 @@ import {store} from "../store.js";
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.dropdown:hover {
-
+.dropdown:hover .active-menu{
+  color: $verde-acqua;
+  border-bottom: 2px solid $verde-acqua;
 }
 
+// HEADER STYLE
   header{
     background-color: white;
 

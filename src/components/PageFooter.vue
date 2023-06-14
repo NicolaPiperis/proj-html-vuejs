@@ -95,7 +95,7 @@
 <style scoped lang="scss">
 @use './../styles/partials/variables.scss' as *;
 
-
+// FOOTER STYLE
     footer{
         background-color: #171621;
         height: 500px;

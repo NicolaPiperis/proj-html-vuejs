@@ -106,6 +106,9 @@
                                 <img src="./../../public/images/icon-youtube-play.png" alt="youtube icon" class="youtube-decoration">
                             </a>
 
+                            <img src="../../public/images/maxcoach-shape-07-150x150.png" alt="" class="decoration-su">
+                            <img src="../../public/images/maxcoach-shape-05-150x150.png" alt="" class="decoration-su2">
+
                         </div>
                         
                     </div>
@@ -115,6 +118,7 @@
 
                         <div class="pre-title">
                             HOW WE WORK
+                            <div class="circle"></div>
                         </div>
 
                         <h2>
@@ -134,6 +138,7 @@
                             <i class="fa-solid fa-arrow-right"></i>
 
                         </div>
+                         
 
                     </div>    
 
@@ -144,7 +149,7 @@
             
         </section>
 
-        <!-- SEZIONE COLORE CON SFUMATURA -->
+        <!-- SEZIONE COLORE CON SFUMATURA /CARDS -->
         <section class="white2-sections">
 
             <div class="row content-center">
@@ -300,7 +305,10 @@
         </section>
 
         <!-- TESTIMONIALS -->
-        <section class="white-sections">
+        <section class="white-sections wave-relative">
+
+            <!-- DECORAZIONE ONDA -->
+            <img src="../../public/images/wave.svg" alt="" class="wave">
 
             <div class="container">
 
@@ -639,6 +647,7 @@
         padding-top: 200px;
     }
 
+
     .cream-sections{
         padding-top: 200px;
         background-color: $panna;
@@ -658,6 +667,7 @@
 
         .pre-title{
         color: $grigio ;
+        position: relative;
         }
 
         h2{
@@ -975,6 +985,8 @@
         }
 
     }
+
+    // DECORATION
     .settings-n-decoration{
         border-color: #20ad959f;
         align-self: center;
@@ -1058,6 +1070,45 @@
         background-repeat: no-repeat;
         top: -80px;
         right: 110px;
+    }
+
+    .wave{
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    }
+    .wave-relative{
+        position: relative;
+    }
+    
+    // skills upgrade section
+    .circle{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 10px solid #ecc5ab;
+            position: absolute;
+            top: -100px;
+            left: -10px;
+    }
+
+    .decoration-su{
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        right: -20px;
+        bottom: -80px;
+        z-index: -1;
+    }
+
+    .decoration-su2{
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        left: -100px;
+        top: 80px;
+        z-index: -1;
     }
 
     .main-img{
